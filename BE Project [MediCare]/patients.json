@@ -1,0 +1,92 @@
+[
+  {
+    "firstName": "Aarav",
+    "lastName": "Sharma",
+    "age": "30",
+    "gender": "male",
+    "phone": "+91 98765 43210",
+    "emergencyContact": "+91 99999 88888",
+    "bloodGroup": "O+"
+  },
+  {
+    "firstName": "Priya",
+    "lastName": "Patel",
+    "age": "25",
+    "gender": "female",
+    "phone": "+91 88888 77777",
+    "emergencyContact": "+91 90123 45678",
+    "bloodGroup": "A-"
+  },
+  {
+    "firstName": "Vikram",
+    "lastName": "Reddy",
+    "age": "42",
+    "gender": "male",
+    "phone": "+91 99000 11223",
+    "emergencyContact": "+91 94444 33445",
+    "bloodGroup": "B+"
+  },
+  {
+    "firstName": "Ananya",
+    "lastName": "Gupta",
+    "age": "33",
+    "gender": "female",
+    "phone": "+91 98765 43211",
+    "emergencyContact": "+91 77777 88888",
+    "bloodGroup": "AB-"
+  },
+  {
+    "firstName": "Siddharth",
+    "lastName": "Verma",
+    "age": "28",
+    "gender": "male",
+    "phone": "+91 91567 12345",
+    "emergencyContact": "+91 98123 45678",
+    "bloodGroup": "O-"
+  },
+  {
+    "firstName": "Neha",
+    "lastName": "Iyer",
+    "age": "40",
+    "gender": "female",
+    "phone": "+91 98989 54321",
+    "emergencyContact": "+91 93210 87654",
+    "bloodGroup": "A+"
+  },
+  {
+    "firstName": "Arjun",
+    "lastName": "Desai",
+    "age": "55",
+    "gender": "male",
+    "phone": "+91 97332 76543",
+    "emergencyContact": "+91 98767 65432",
+    "bloodGroup": "B-"
+  },
+  {
+    "firstName": "Sneha",
+    "lastName": "Kapoor",
+    "age": "35",
+    "gender": "female",
+    "phone": "+91 99988 77665",
+    "emergencyContact": "+91 91111 22222",
+    "bloodGroup": "AB+"
+  },
+  {
+    "firstName": "Manish",
+    "lastName": "Singh",
+    "age": "50",
+    "gender": "male",
+    "phone": "+91 81234 56789",
+    "emergencyContact": "+91 80000 90000",
+    "bloodGroup": "O+"
+  },
+  {
+    "firstName": "Radhika",
+    "lastName": "Nair",
+    "age": "26",
+    "gender": "female",
+    "phone": "+91 98765 67890",
+    "emergencyContact": "+91 70000 40000",
+    "bloodGroup": "A-"
+  }
+]

@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 2rem 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  font-size: 2.5rem;
+  color: #0be307;
+  text-decoration: none;
+}
+
+.header .logo i {
+  color: #0be307;
+}
+
+.header .navbar a {
+  color: #333;
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header .navbar a:hover {
+  color: #0be307;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rem 5% 5rem;
+}
+
+.home .img img {
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.home .content h3 {
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.home .content p {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.home .btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #0be307;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.home .btn:hover {
+  background-color: #0a9e26;
+}
+
+.about {
+  padding: 5rem 10%;
+  background-color: #f7f7f7;
+}
+
+.about .heading {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.about .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about .content {
+  flex: 1;
+}
+
+.about .content h3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.about .content p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about .img img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.improved-btn {
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  background-color: #0be307;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.improved-btn:hover {
+  background-color: #0a9e26;
+}
+
+.improved-btn span {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.services {
+  padding: 5rem 10%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.services .heading {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-cards .card {
+  width: 30%;
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.service-cards .card i {
+  font-size: 3rem;
+  color: #0be307;
+  margin-bottom: 1rem;
+}
+
+.service-cards .card h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.service-cards .card p {
+  font-size: 1.6rem;
+}
+
+.contact {
+  padding: 5rem 10%;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.contact .heading {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.contact-info i {
+  margin-right: 1rem;
+  color: #0be307;
+}
+
+.contact-social {
+  margin-top: 2rem;
+}
+
+.contact-social p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-social .social-icon {
+  font-size: 2.4rem;
+  color: #333;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+.contact-social .social-icon:hover {
+  color: #0be307;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  .header .navbar {
+    display: none;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about .row {
+    flex-direction: column;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .service-cards .card {
+    width: 100%;
+  }
+
+  .contact form {
+    display: block;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered Records</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Patient Details</h1>
+    </center>
+
+    <script>
+        fetch("http://localhost:3000/alldata")
+            .then((response) => response.json())
+            .then((data) => {
+                const table = document.createElement('table');
+                const tableBody = document.createElement('tbody');
+
+                const headerRow = document.createElement('tr');
+                const firstNameHeader = document.createElement('th');
+                const lastNameHeader = document.createElement('th');
+                const ageHeader = document.createElement('th');
+                const genderHeader = document.createElement('th');
+                const phoneHeader = document.createElement('th');
+                const emergencyContactHeader = document.createElement('th');
+                const bloodGroupHeader = document.createElement('th');
+
+                firstNameHeader.textContent = "First Name";
+                lastNameHeader.textContent = "Last Name";
+                ageHeader.textContent = "Age";
+                genderHeader.textContent = "Gender";
+                phoneHeader.textContent = "Phone Number";
+                emergencyContactHeader.textContent = "Emergency Contact";
+                bloodGroupHeader.textContent = "Blood Group";
+
+                headerRow.appendChild(firstNameHeader);
+                headerRow.appendChild(lastNameHeader);
+                headerRow.appendChild(ageHeader);
+                headerRow.appendChild(genderHeader);
+                headerRow.appendChild(phoneHeader);
+                headerRow.appendChild(emergencyContactHeader);
+                headerRow.appendChild(bloodGroupHeader);
+                tableBody.appendChild(headerRow);
+
+                data.forEach(person => {
+                    const row = document.createElement('tr');
+                    const firstNameCell = document.createElement('td');
+                    const lastNameCell = document.createElement('td');
+                    const ageCell = document.createElement('td');
+                    const genderCell = document.createElement('td');
+                    const phoneCell = document.createElement('td');
+                    const emergencyContactCell = document.createElement('td');
+                    const bloodGroupCell = document.createElement('td');
+
+                    firstNameCell.textContent = person.firstName;
+                    lastNameCell.textContent = person.lastName;
+                    ageCell.textContent = person.age;
+                    genderCell.textContent = person.gender;
+                    phoneCell.textContent = person.phone;
+                    emergencyContactCell.textContent = person.emergencyContact;
+                    bloodGroupCell.textContent = person.bloodGroup;
+
+                    row.appendChild(firstNameCell);
+                    row.appendChild(lastNameCell);
+                    row.appendChild(ageCell);
+                    row.appendChild(genderCell);
+                    row.appendChild(phoneCell);
+                    row.appendChild(emergencyContactCell);
+                    row.appendChild(bloodGroupCell);
+                    tableBody.appendChild(row);
+                });
+
+                table.appendChild(tableBody);
+                document.body.appendChild(table);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                document.body.innerHTML = "<h1>Failed to load data</h1>";
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 24px;
+            border-radius: 8px;
+            width: 63.5%;
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+
+        form {
+            background-color: #fff;
+            width: 70%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            margin-bottom: 20px;
+            border: 0;
+            border-top: 2px solid #f4f4f4;
+        }
+
+        .text {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .text label {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+            width: 30%;
+            margin-right: 10px;
+        }
+
+        .text input,
+        .text select {
+            width: 65%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .text input:focus,
+        .text select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .text input[type="radio"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .text .radio-group {
+            display: flex;
+            justify-content: flex-start;
+            width: 65%;
+        }
+
+        .text .radio-group label {
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        button {
+            display: block;
+            width: 200px;
+            height: 45px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px auto 0;
+            margin-bottom: -20px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            form {
+                width: 90%;
+            }
+
+            .text {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .text label,
+            .text input,
+            .text select {
+                width: 100%;
+            }
+
+            .text .radio-group {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <title>Fill Details</title>
+</head>
+
+<body>
+    <header>
+        <h1>Patient Details</h1>
+    </header>
+
+    <form action="/form" method="POST">
+        <h2>Personal Information</h2>
+        <hr>
+
+        <div class="text">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter patient's first name" required>
+        </div>
+
+        <div class="text">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter patient's last name" required>
+        </div>
+
+        <div class="text">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter patient's age" required min="1" max="120">
+        </div>
+
+        <div class="text">
+            <label>Gender</label>
+            <div class="radio-group">
+                <label for="male">
+                    <input type="radio" name="gender" id="male" value="male" required> Male
+                </label>
+                <label for="female">
+                    <input type="radio" name="gender" id="female" value="female"> Female
+                </label>
+            </div>
+        </div>
+
+        <div class="text">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter patient's phone number" required>
+        </div>
+
+        <div class="text">
+            <label for="emergencyContact">Emergency Contact</label>
+            <input type="tel" id="emergencyContact" name="emergencyContact" placeholder="Enter emergency contact number"
+                required>
+        </div>
+
+        <div class="text">
+            <label for="bloodGroup">Blood Group</label>
+            <select id="bloodGroup" name="bloodGroup" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
